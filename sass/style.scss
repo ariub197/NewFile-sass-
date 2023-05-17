@@ -1,28 +1,28 @@
-@import "setting/_setting";
+@use "setting/_setting";
 /*==========================================================
 Foundation
 ==========================================================*/
-@import "foundation/_reset";
-@import "foundation/_base";
-@import "foundation/mixin";
+@use "foundation/_reset";
+@use "foundation/_base";
+@use "foundation/mixin";
 /*==========================================================
 Layout
 ==========================================================*/
-@import "layout/_main";
-@import "layout/_header";
-@import "layout/_nav";
-@import "layout/_footer";
+@use "layout/_main";
+@use "layout/_header";
+@use "layout/_nav";
+@use "layout/_footer";
 /*----------------------------------------------------------
 Component
 ----------------------------------------------------------*/
-@import "object/component/_c-btn";
+@use "component/_c-btn";
 
 /*----------------------------------------------------------
 Project
 ----------------------------------------------------------*/
-// @import "object/project/**";
+// @use "project/**";
 
 /*----------------------------------------------------------
 Utility
 ----------------------------------------------------------*/
-// @import "object/utility/**";
+// @use "utility/**";
