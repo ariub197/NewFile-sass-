@@ -1,0 +1,42 @@
+@use "./size" as setting;
+
+// media
+@mixin mq($breakpoint: sp) {
+  @media #{map-get(setting.$breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// pc font size
+@mixin font($size: 10, $height: 10, $spacing: 0, $weight: 900) {
+	font-size: ($size / 10 * 1rem);
+	line-height: ($height / $size);
+	letter-spacing: ($spacing / 1000 * 1em);
+	font-weight: $weight;
+}
+
+// sp font size
+@mixin font-sp($size: 10, $height: 10, $spacing: 0, $weight: 300) {
+	@include mq(tab) {
+		font-size: calc((#{$size} / #{$layout-width-sp}) * 100vw);
+		line-height: ($height / $size);
+		letter-spacing: ($spacing / 1000 * 1em);
+		font-weight: $weight;
+	}
+}
+
+//inner
+@mixin inner {
+  width: setting.$layout-width-canvas;
+  max-width: 100%;
+  padding: 0 setting.$pd-x-pc;
+  margin: 0 auto;
+
+  @include mq("tab") {
+    padding: setting.$pd-x-tab;
+  }
+
+  @include mq("sp") {
+    padding: 0 setting.$pd-x-sp
+  }
+}

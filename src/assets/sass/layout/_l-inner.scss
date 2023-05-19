@@ -1,0 +1,17 @@
+@use "../setting" as setting;
+
+.l-inner {
+	width: setting.$layout-width-canvas;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+  padding: 0 setting.$pd-x-pc;
+
+	@include setting.mq('tab') {
+		padding: 0 setting.$pd-x-tab;
+	}
+
+	@include setting.mq('sp') {
+		padding: setting.$pd-x-sp;
+	}
+}
