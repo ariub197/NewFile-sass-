@@ -1,0 +1,20 @@
+/*==========================================================
+mediaquery
+==========================================================*/
+$layout-width-canvas: 1280px;
+$layout-width-inner: 1200px;
+$layout-width-sp: 768px;
+
+$breakpoints: (
+  "sp": "(max-width: #{($layout-width-sp) - 1px})",
+  "tab-only": "(min-width: #{($layout-width-sp)}) and (max-width: #{($layout-width-canvas) - 1px})",
+  "tab": "(max-width: #{($layout-width-canvas) - 1px})",
+  "pc": "(min-width: #{$layout-width-canvas})",
+) !default;
+
+// media
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}

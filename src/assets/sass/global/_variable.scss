@@ -1,0 +1,77 @@
+/*==========================================================
+variable
+==========================================================*/
+// 余白
+$pd-pc: 0;
+$pd-tab: 32px;
+$pd-sp: 24px;
+
+// ヘッダー高さ
+$header-height-sp: 60px;
+$header-height-pc: 60px;
+
+// z-index の指定
+$layer: (
+	loading: 200,
+	modal: 100,
+	drawer: 40,
+	floating: 30,
+	header: 20,
+	footer: 10,
+	default: 1
+);
+
+// アイコン
+$icon-width: 30px;
+$icon-height: 30px;
+$icon-font: 30px;
+
+// ドロワー
+$drawer-bar-space: 5px;
+$drawer-bar-width: 30px;
+$drawer-bar-height: 3px;
+
+// ベース色
+$col-mai: #efa336;
+$col-acc: #e65100;
+$col-bg: #fff;
+$col-txt: #424242;
+$col-txt-lead: #757575;
+
+//shadow
+$text-shadow: 5px 5px 30.4px #333333,
+              -5px 5px 30.4px #333333,
+              5px -5px 30.4px #333333,
+              -5px -5px 30.4px #333333;
+
+$box-shadow: 0 0 30.4px 9.6px #333333;
+
+// 透過度
+$opacity: 0.6;
+
+// ヘッダー
+$header-bg: #fff;
+$header-col: #fff;
+
+// フッター
+$footer-bg: #666;
+
+// button
+$btn-bg: #757575;
+$btn-col: #fff;
+$btn-hov: #000;
+
+//font
+$font-en: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+$font-jp: "HiraKakuPro-W6", "ヒラギノ角ゴ Pro W6", "メイリオ", meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+
+$font-mincho: "游明朝体", "Yu Mincho", yumincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+$font-gothic: "游ゴシック体", "Yu Gothic", yugothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+
+$ff-awesome: "Font Awesome 5 Free", sans-serif;
+$ff-code: monospace, sans-serif;
+
+$ff-base: $font-en;
+$fz-base: 1.6rem;
+$fw-base: 500;
+$lh-base: 1.6;

@@ -9,6 +9,7 @@ const cleanCss = require("gulp-clean-css"); //cssの圧縮
 const uglify = require("gulp-uglify"); //jsの圧縮
 const rename = require("gulp-rename");
 const htmlBeautify = require("gulp-html-beautify"); //htmlの整形
+const concat = require('gulp-concat');
 
 //sassのコンパイル
 function compileSass() {
@@ -47,6 +48,7 @@ function browserReload(done) {
 //jsコンパイル
 function minJS() {
   return gulp.src("./src/assets/js/**/*.js")
+  .pipe(concat('script.js'))
   .pipe(uglify())
   .pipe(rename({
     suffix: ".min"

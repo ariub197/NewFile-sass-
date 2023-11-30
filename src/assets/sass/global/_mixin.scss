@@ -1,11 +1,5 @@
-@use "./size" as setting;
-
-// media
-@mixin mq($breakpoint: sp) {
-  @media #{map-get(setting.$breakpoints, $breakpoint)} {
-    @content;
-  }
-}
+@use "./variable" as v;
+@use "./mediaquery" as m;
 
 // pc font size
 @mixin font($size: 10, $height: 10, $spacing: 0, $weight: 900) {
@@ -27,16 +21,16 @@
 
 //inner
 @mixin inner {
-  width: setting.$layout-width-canvas;
+  width: v.$layout-width-canvas;
   max-width: 100%;
-  padding: 0 setting.$pd-x-pc;
+  padding: 0 v.$pd-pc;
   margin: 0 auto;
 
   @include mq("tab") {
-    padding: setting.$pd-x-tab;
+    padding: setting.$pd-tab;
   }
 
   @include mq("sp") {
-    padding: 0 setting.$pd-x-sp
+    padding: 0 setting.$pd-sp
   }
 }
