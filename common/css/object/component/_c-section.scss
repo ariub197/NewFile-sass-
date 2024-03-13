@@ -1,0 +1,18 @@
+@use "../../global/" as g;
+
+.c-section {
+  position: relative;
+  text-align: center;
+  padding-bottom: 15px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 64px;
+    height: 1px;
+    background: g.$color-accent;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,17 @@
+@use '../../global' as g;
+
+/* cursor
+----------------------------------------------------------------- */
+.u-cursor {
+  &--pointer {
+    cursor: pointer;
+  }
+
+  &--default {
+    cursor: default;
+  }
+
+  &--events-none {
+    pointer-events: none;
+  }
+}

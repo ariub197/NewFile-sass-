@@ -1,0 +1,151 @@
+@use "../../global/" as g;
+
+.c-content {
+  &__title {
+    position: relative;
+    width: 200px;
+    max-width: 100%;
+    @include g.font(32, 32, 0, 400);
+    padding-bottom: 5px;
+    font-family: g.$font-en;
+    border-bottom: 1px solid g.$color-main;
+    margin-bottom: 120px;
+    white-space: nowrap;
+
+    @include g.mq("sp") {
+      width: 170px;
+      @include g.font(24, 24, 0, 400);
+      margin-bottom: 80px;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 1px;
+      height: 13px;
+      bottom: 0;
+      right: 4px;
+      transform: translate(0%, 87%) rotate(45deg);
+      background: g.$color-main;
+    }
+  }
+
+  &__title--long {
+    width: 400px;
+
+    @include g.mq("sp") {
+      width: 300px;
+    }
+  }
+
+  &__sub-title {
+    @include g.font(18, 18, 0, 700);
+    margin-bottom: 40px;
+    margin-top: 40px;
+    @include g.mq("sp") {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    line-height: 200%;
+    margin-bottom: 20px;
+    @include g.mq("sp") {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__name {
+    position: relative;
+    width: fit-content;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    @include g.font(18, 21.78, 0, 700);
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 500px;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background: g.$color-line;
+
+      @include g.mq("sp") {
+        width: 100%;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: ":";
+      top: 44%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__body {
+    width: 85%;
+
+    @include g.mq("sp") {
+      width: calc(100% - 20px);
+      padding-left: 20px;
+    }
+
+    &:hover {
+      .l-text-accent::after {
+        background: g.$color-accent;
+      }
+    }
+  }
+
+  &__list-item {
+    position: relative;
+    padding-left: 20px;
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      background: url(../img/check-box.svg);
+      width: 12px;
+      height: 12px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__img {
+    width: 80%;
+    margin: 100px 0 120px;
+    @include g.mq("sp") {
+      margin: 50px 0 80px;
+      width: 100%;
+    }
+  }
+
+  &__overview {
+    width: 1280px;
+    max-width: 100%;
+  }
+}
+
+.c-content-bg {
+  position: fixed;
+  @include g.font(120, 120, 145.23, 400);
+  font-family: g.$font-bg;
+  color: g.$color-background;
+  top: 20px;
+  right: 20px;
+  z-index: -1;
+  writing-mode: vertical-lr;
+  @include g.mq("sp") {
+    display: none;
+  }
+}

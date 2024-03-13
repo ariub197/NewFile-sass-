@@ -1,0 +1,35 @@
+@use "./variable" as v;
+
+// media
+@mixin mq($breakpoint: sp) {
+  @media #{map-get(v.$breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// pc font size
+@mixin font($size: 10, $height: 10, $spacing: 0, $weight: 900) {
+	font-size: calc($size / 16 * 1rem);
+	line-height: calc($height / $size);
+	letter-spacing: calc($spacing / 1000 * 1em);
+	font-weight: $weight;
+}
+
+//inner
+@mixin inner {
+  // width: v.$layout-width-canvas;
+  max-width: 100%;
+  padding: 0 v.$pd-x-pc;
+  margin: 0 auto;
+
+  @include mq("sp") {
+    padding: 0 v.$pd-x-sp
+  }
+}
+
+$baseFontSize: 16;
+
+//size変換
+@function rem($pixels) {
+  @return ($pixels / $baseFontSize * 1rem);
+}

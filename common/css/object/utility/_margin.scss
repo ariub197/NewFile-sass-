@@ -1,0 +1,270 @@
+@use '../../global' as g;
+
+/* margin
+----------------------------------------------------------------- */
+.u-margin-top {
+  margin-top: g.$normal * g.$goldRatio;
+  @include g.tabletS {
+    margin-top: g.$normal;
+  }
+
+  &--narrowest {
+    margin-top: g.$narrow/g.$goldRatio;
+  }
+
+  &--narrowestPU {
+    margin-top: g.$normal * g.$goldRatio;
+    @include g.tabletS {
+      margin-top: g.$narrow/g.$goldRatio;
+    }
+  }
+
+  &--narrow {
+    margin-top: g.$narrow;
+  }
+
+  &--narrowPU {
+    margin-top: g.$normal * g.$goldRatio;
+    @include g.tabletS {
+      margin-top: g.$narrow;
+    }
+  }
+
+  &--middle {
+    margin-top: g.$narrow * g.$goldRatio;
+  }
+
+  &--middlePO {
+    margin-top: g.$narrow * g.$goldRatio;
+    @include g.tabletS {
+      margin-top: g.$narrow;
+    }
+  }
+
+  &--normal {
+    margin-top: g.$normal;
+  }
+
+  &--normalPU {
+    margin-top: g.$normal * g.$goldRatio;
+    @include g.tabletS {
+      margin-top: g.$normal;
+    }
+  }
+
+  &--wide {
+    margin-top: g.$wide;
+    @include g.tabletS {
+      margin-top: g.$normal;
+    }
+  }
+
+  &--widest {
+    margin-top: g.$widest;
+    @include g.tabletS {
+      margin-top: g.$wide;
+    }
+  }
+
+  &--section {
+    margin-top: g.$widest * g.$goldRatio;
+    @include g.tabletS {
+      margin-top: g.$widest;
+    }
+  }
+
+  &--block {
+    margin-top: g.$wide;
+    @include g.tabletS {
+      margin-top: g.$normal * g.$goldRatio;
+    }
+  }
+
+  &--nav {
+    @include g.note {
+      margin-top: g.$wide;
+    }
+    @include g.tabletS {
+      margin-top: g.$normal * g.$goldRatio;
+    }
+  }
+}
+
+.u-margin-bottom {
+  margin-bottom: g.$normal * g.$goldRatio;
+
+  &--narrowest {
+    margin-bottom: g.$narrow/g.$goldRatio;
+  }
+
+  &--narrowestPU {
+    margin-bottom: g.$normal * g.$goldRatio;
+    @include g.tabletS {
+      margin-bottom: g.$narrow/g.$goldRatio;
+    }
+  }
+
+  &--narrow {
+    margin-bottom: g.$narrow;
+  }
+
+  &--middle {
+    margin-bottom: g.$narrow * g.$goldRatio;
+  }
+
+  &--normal {
+    margin-bottom: g.$normal;
+  }
+
+  &--wide {
+    margin-bottom: g.$wide;
+  }
+
+  &--widest {
+    margin-bottom: g.$widest;
+  }
+}
+
+.u-margin-left {
+  margin-left: g.$normal * g.$goldRatio;
+
+  &--narrowest {
+    margin-left: g.$narrow/g.$goldRatio;
+  }
+
+  &--narrowestPU {
+    margin-left: g.$normal * g.$goldRatio;
+    @include g.tabletS {
+      margin-left: g.$narrow/g.$goldRatio;
+    }
+  }
+
+  &--narrow {
+    margin-left: g.$narrow;
+  }
+
+  &--middle {
+    margin-left: g.$narrow * g.$goldRatio;
+  }
+
+  &--normal {
+    margin-left: g.$normal;
+  }
+
+  &--wide {
+    margin-left: g.$wide;
+  }
+
+  &--widest {
+    margin-left: g.$widest;
+  }
+}
+
+.u-margin-right {
+  margin-right: g.$normal * g.$goldRatio;
+
+  &--narrowest {
+    margin-right: g.$narrow/g.$goldRatio;
+  }
+
+  &--narrowestPU {
+    margin-right: g.$normal * g.$goldRatio;
+    @include g.tabletS {
+      margin-right: g.$narrow/g.$goldRatio;
+    }
+  }
+
+  &--narrow {
+    margin-right: g.$narrow;
+  }
+
+  &--middle {
+    margin-right: g.$narrow * g.$goldRatio;
+  }
+
+  &--normal {
+    margin-right: g.$normal;
+  }
+
+  &--wide {
+    margin-right: g.$wide;
+  }
+
+  &--widest {
+    margin-right: g.$widest;
+  }
+}
+
+.u-margin-auto {
+  margin: auto;
+
+  &--left {
+    margin-left: auto;
+  }
+
+  &--right {
+    margin-right: auto;
+  }
+
+  &--top {
+    margin-top: auto;
+  }
+
+  &--bottom {
+    margin-bottom: auto;
+  }
+
+  &--side {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.u-margin-none {
+  margin: 0;
+
+  &--left {
+    margin-left: 0;
+  }
+
+  &--right {
+    margin-right: 0;
+  }
+
+  &--top {
+    margin-top: 0;
+  }
+
+  &--bottom {
+    margin-bottom: 0;
+  }
+}
+/* padding
+----------------------------------------------------------------- */
+.u-padding-top {
+  margin-top: g.$normal * g.$goldRatio;
+
+  &--narrowest {
+    margin-top: g.$narrow * g.$goldRatio;
+  }
+
+  &--narrow {
+    margin-top: g.$narrow;
+  }
+
+  &--middle {
+    margin-top: g.$narrow * g.$goldRatio;
+  }
+
+  &--normal {
+    margin-top: g.$normal;
+  }
+
+  &--wide {
+    margin-top: g.$wide;
+  }
+
+  &--widest {
+    margin-top: g.$widest;
+  }
+}

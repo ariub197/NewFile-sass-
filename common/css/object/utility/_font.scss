@@ -1,0 +1,57 @@
+@use '../../global' as g;
+
+/* font
+----------------------------------------------------------------- */
+.u-font {
+  &--normal {
+    font-weight: normal;
+  }
+
+  &--medium {
+    font-weight: 500;
+  }
+
+  &--bold {
+    font-weight: bold;
+  }
+
+  &--italic {
+    font-style: italic;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--centerPU {
+    @include g.tabletS {
+      text-align: center;
+    };
+  }
+
+  &--centerTMU {
+    @include g.tabletM {
+      text-align: center;
+    };
+  }
+
+  &--nowrap {
+    white-space: nowrap;
+  }
+
+  &--clamp-second {
+    display: -webkit-box;
+    overflow: hidden;
+    word-break: break-all;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}

@@ -1,0 +1,37 @@
+@use "../global/" as g;
+
+.l-content {
+  margin-top: 120px;
+
+  &__bg {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-top: 80px;
+    background: url(../img/top-bg.jpg) no-repeat center center / cover;
+    background-attachment: fixed;
+  }
+
+  @include g.mq("sp") {
+    margin-top: 80px;
+  }
+}
+
+.l-text-accent {
+  position: relative;
+  z-index: 2;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: g.rem(8);
+    bottom: 4px;
+    left: 0;
+    background: g.$color-background;
+    z-index: -1;
+    transition: all g.$transition;
+    @include g.mq("sp") {
+      background: g.$color-accent;
+    }
+  }
+}

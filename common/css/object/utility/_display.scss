@@ -1,0 +1,100 @@
+@use '../../global' as g;
+
+/* display
+----------------------------------------------------------------- */
+.u-disp-contnts {
+  display: contents;
+}
+
+.u-disp-block {
+  display: block;
+
+  &--PU {
+    @include g.tabletS {
+      display: block;
+    };
+  }
+}
+
+.u-disp-none {
+  display: none;
+
+  &--DSU {
+    @include g.desktopS {
+      display: none;
+    };
+  }
+
+  &--DSO {
+    display: none;
+    @include g.desktopS {
+      display: block;
+    };
+  }
+
+  &--NU {
+    @include g.note {
+      display: none;
+    };
+  }
+
+  &--NO {
+    display: none;
+    @include g.note {
+      display: block;
+    };
+  }
+
+  &--TLLU {
+    @include g.tabletLL {
+      display: none;
+    };
+  }
+
+  &--TLLO {
+    display: none;
+    @include g.tabletLL {
+      display: block;
+    };
+  }
+
+  &--TMU {
+    @include g.tabletM {
+      display: none;
+    };
+  }
+
+  &--TMO {
+    display: none;
+    @include g.tabletM {
+      display: block;
+    };
+  }
+
+  &--PU {
+    @include g.tabletS {
+      display: none;
+    };
+  }
+
+  &--PO {
+    display: none;
+    @include g.tabletS {
+      display: block;
+    };
+  }
+
+  &--flexPU {
+    display: none;
+    @include g.tabletS {
+      display: flex;
+    };
+  }
+
+  &--inlinePU {
+    display: none;
+    @include g.tabletS {
+      display: inline;
+    };
+  }
+}

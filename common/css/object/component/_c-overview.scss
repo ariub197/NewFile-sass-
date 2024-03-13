@@ -1,0 +1,32 @@
+@use "../../global/" as g;
+
+.c-overview {
+  width: 570px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  dl {
+    padding: 20px 0;
+    display: flex;
+    border-bottom: 1px solid g.$color-line;
+  }
+
+  dt {
+    @include g.font(16, 16, 19.36, 700);
+    width: 122px;
+
+    @include g.mq("sp") {
+      width: 90px;
+    }
+  }
+
+  dd {
+    @include g.font(16, 24, 19.36, 400);
+    width: calc(100% - 122px);
+    margin-left: 20px;
+  }
+}
+
+.c-overvirew__work {
+  margin-top: 20px;
+}

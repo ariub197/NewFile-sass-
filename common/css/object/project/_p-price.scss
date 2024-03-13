@@ -1,0 +1,33 @@
+@use "../../global/" as g;
+
+.p-price__table {
+  border-collapse: collapse;
+  table-layout: fixed;
+  width: 80%;
+  @include g.mq("sp") {
+    width: 100%
+  }
+
+  th,
+  td {
+    @include g.font(16, 16, 19.36, 400);
+    border: 1px solid g.$color-line;
+    padding: 8px 20px;
+    @include g.mq("sp") {
+      padding-inline: 10px;
+    }
+  }
+
+  th {
+    width: 30%;
+  }
+
+  tr:nth-child(2n) {
+    background-color: g.$color-background;
+  }
+}
+
+.p-price__text {
+  @include g.font(12, 12, 0, 400);
+  margin-top: 10px;
+}

@@ -1,0 +1,115 @@
+@use "../../global/" as g;
+
+.c-catch {
+  width: g.rem(375);
+  max-width: 100%;
+  background: #fff;
+  padding: g.rem(20);
+  box-shadow: g.$box-shadow;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  @media (max-width: 400px) {
+    width: 100%;
+    justify-content: center;
+  }
+
+  &:nth-child(2) {
+    margin-top: 20px;
+  }
+
+  &__phrase {
+    position: relative;
+    @include g.font(32, 32, 0, 300);
+    z-index: 2;
+    white-space: nowrap;
+    width: fit-content;
+    font-family: g.$font-en;
+
+    span {
+      position: relative;
+      z-index: -1;
+      transition: all g.$transition;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 0;
+        width: 50px;
+        height: 4px;
+        background: g.$text-accent;
+        z-index: 1;
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 0;
+        width: 50px;
+        height: 4px;
+        background: g.$text-accent;
+        z-index: 1;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+      @include g.mq("sp") {
+        &::before,
+        &::after {
+          background: g.$color-accent;
+        }
+      }
+    }
+  }
+
+  &__phrase-accent {
+    white-space: nowrap;
+    @include g.font(38, 38, 0, 700);
+    padding-left: 29px;
+    color: g.$text-accent;
+    transition: all g.$transition;
+
+    @include g.mq("sp") {
+      color: g.$color-accent;
+    }
+  }
+
+  &__lead {
+    @include g.font(24, 24, 0, 300);
+  }
+
+  &__img {
+    width: 350px;
+    max-width: 100%;
+    margin-left: auto;
+
+    @include g.mq("tab") {
+      width: 50%;
+    }
+
+    @include g.mq("sp") {
+      width: 300px;
+      max-width: 100%;
+      margin: 0 auto 5.3vw;
+    }
+  }
+
+  &__body {
+    float: left;
+    &:hover {
+      .l-text-accent::after {
+        background: g.$color-accent;
+      }
+    }
+    @media (max-width: 870px) {
+      padding-bottom: 17%;
+    }
+    @include g.mq("sp") {
+      float: none;
+      padding-bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

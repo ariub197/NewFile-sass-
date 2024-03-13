@@ -1,0 +1,363 @@
+/* width
+----------------------------------------------------------------- */
+@use '../../global' as g;
+
+.u-width-full {
+  width: 100%;
+
+  &--PU {
+    width: auto;
+    @include g.tabletS {
+      width: 100%;
+    };
+  }
+
+  &--PO {
+    width: 100%;
+    @include g.tabletS {
+      width: auto;
+    };
+  }
+}
+
+.u-width-95 {
+  width: 95%;
+
+  &--PU {
+    width: auto;
+    @include g.tabletS {
+      width: 95%;
+    };
+  }
+
+  &--PO {
+    width: 95%;
+    @include g.tabletS {
+      width: auto;
+    };
+  }
+}
+
+.u-width-90 {
+  width: 90%;
+
+  &--PU {
+    width: auto;
+    @include g.tabletS {
+      width: 90%;
+    };
+  }
+
+  &--PO {
+    width: 90%;
+    @include g.tabletS {
+      width: auto;
+    };
+  }
+}
+
+.u-width-85 {
+  width: 85%;
+
+  &--PU {
+    width: auto;
+    @include g.tabletS {
+      width: 85%;
+    };
+  }
+
+  &--PO {
+    width: 85%;
+    @include g.tabletS {
+      width: auto;
+    };
+  }
+}
+
+.u-width-80 {
+  width: 80%;
+
+  &--PU {
+    width: auto;
+    @include g.tabletS {
+      width: 80%;
+    };
+  }
+
+  &--PO {
+    width: 80%;
+    @include g.tabletS {
+      width: auto;
+    };
+  }
+}
+
+.u-width-75 {
+  width: 75%;
+
+  &--PU {
+    width: auto;
+    @include g.tabletS {
+      width: 75%;
+    };
+  }
+
+  &--PO {
+    width: 75%;
+    @include g.tabletS {
+      width: auto;
+    };
+  }
+}
+
+.u-width-70 {
+  width: 70%;
+
+  &--PU {
+    width: auto;
+    @include g.tabletS {
+      width: 70%;
+    };
+  }
+
+  &--PO {
+    width: 70%;
+    @include g.tabletS {
+      width: auto;
+    };
+  }
+}
+
+.u-width-65 {
+  width: 65%;
+
+  &--PU {
+    width: auto;
+    @include g.tabletS {
+      width: 65%;
+    };
+  }
+
+  &--PO {
+    width: 65%;
+    @include g.tabletS {
+      width: auto;
+    };
+  }
+}
+
+.u-width-60 {
+  width: 60%;
+
+  &--PU {
+    width: auto;
+    @include g.tabletS {
+      width: 60%;
+    };
+  }
+
+  &--PO {
+    width: 60%;
+    @include g.tabletS {
+      width: auto;
+    };
+  }
+}
+
+.u-width-55 {
+  width: 55%;
+
+  &--PU {
+    width: auto;
+    @include g.tabletS {
+      width: 55%;
+    };
+  }
+
+  &--PO {
+    width: 55%;
+    @include g.tabletS {
+      width: auto;
+    };
+  }
+}
+
+.u-width-50 {
+  width: 50%;
+
+  &--PU {
+    width: auto;
+    @include g.tabletS {
+      width: 50%;
+    };
+  }
+
+  &--PO {
+    width: 50%;
+    @include g.tabletS {
+      width: auto;
+    };
+  }
+}
+
+.u-width-45 {
+  width: 45%;
+
+  &--PU {
+    width: auto;
+    @include g.tabletS {
+      width: 45%;
+    };
+  }
+
+  &--PO {
+    width: 45%;
+    @include g.tabletS {
+      width: auto;
+    };
+  }
+}
+
+.u-width-40 {
+  width: 40%;
+
+  &--PU {
+    width: auto;
+    @include g.tabletS {
+      width: 40%;
+    };
+  }
+
+  &--PO {
+    width: 40%;
+    @include g.tabletS {
+      width: auto;
+    };
+  }
+}
+
+.u-width-35 {
+  width: 35%;
+
+  &--PU {
+    width: auto;
+    @include g.tabletS {
+      width: 35%;
+    };
+  }
+
+  &--PO {
+    width: 35%;
+    @include g.tabletS {
+      width: auto;
+    };
+  }
+}
+
+.u-width-30 {
+  width: 30%;
+
+  &--PU {
+    width: auto;
+    @include g.tabletS {
+      width: 30%;
+    };
+  }
+
+  &--PO {
+    width: 30%;
+    @include g.tabletS {
+      width: auto;
+    };
+  }
+}
+
+.u-width-25 {
+  width: 25%;
+
+  &--PU {
+    width: auto;
+    @include g.tabletS {
+      width: 25%;
+    };
+  }
+
+  &--PO {
+    width: 25%;
+    @include g.tabletS {
+      width: auto;
+    };
+  }
+}
+
+.u-width-20 {
+  width: 20%;
+
+  &--PU {
+    width: auto;
+    @include g.tabletS {
+      width: 20%;
+    };
+  }
+
+  &--PO {
+    width: 20%;
+    @include g.tabletS {
+      width: auto;
+    };
+  }
+}
+
+.u-width-15 {
+  width: 15%;
+
+  &--PU {
+    width: auto;
+    @include g.tabletS {
+      width: 15%;
+    };
+  }
+
+  &--PO {
+    width: 15%;
+    @include g.tabletS {
+      width: auto;
+    };
+  }
+}
+
+.u-width-10 {
+  width: 10%;
+
+  &--PU {
+    width: auto;
+    @include g.tabletS {
+      width: 10%;
+    };
+  }
+
+  &--PO {
+    width: 10%;
+    @include g.tabletS {
+      width: auto;
+    };
+  }
+}
+
+.u-width-5 {
+  width: 5%;
+
+  &--PU {
+    width: auto;
+    @include g.tabletS {
+      width: 5%;
+    };
+  }
+
+  &--PO {
+    width: 5%;
+    @include g.tabletS {
+      width: auto;
+    };
+  }
+}

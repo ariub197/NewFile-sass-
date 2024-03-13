@@ -1,0 +1,43 @@
+/* link
+----------------------------------------------------------------- */
+@use '../../global' as g;
+
+.u-link {
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    @include g.hover {
+      text-decoration: underline;
+    };
+  }
+
+  &--normal {
+    font-weight: normal;
+    @extend .u-link;
+  }
+
+  &--white-underline {
+    @extend .u-link;
+    font-weight: normal;
+    text-decoration: underline;
+    color: g.$white;
+    &:hover {
+      @include g.hover {
+        color: g.$gray_dark;
+      }
+    }
+  }
+
+  &--navy-underline {
+    @extend .u-link;
+    font-weight: normal;
+    text-decoration: underline;
+    &:hover {
+      @include g.hover {
+        color: g.$gray_dark;
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@use "../global/" as g;
+
+html {
+  font-size: 16px;
+  cursor: none;
+  @include g.mobileL {
+    font-size: calc(1vw * 1000 / 360);
+  }
+}
+
+body {
+  display: flex;
+  color: g.$color-text;
+  font-family: g.$ff-base;
+  font-size: g.$fz-base;
+  font-weight: g.$fw-base;
+  text-align: left;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  width: 100%;
+  @include g.mq("sp") {
+    display: block;
+  }
+}
+
+@media (max-width: 870px) {
+  .not-sp {
+    display: none;
+  }
+}
+
+main {
+  width: 80%;
+  margin-left: auto;
+  @include g.mq("tab") {
+    width: calc(100% - 225px);
+  }
+  @include g.mq("sp") {
+    width: 100%;
+    padding-top: 50px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+article,
+section {
+  margin: 0 auto;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  display: block;
+  text-decoration: none;
+}
+
+* {
+  position: relative;
+}

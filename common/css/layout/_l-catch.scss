@@ -1,0 +1,61 @@
+@use "../global/" as g;
+
+.l-catch {
+  position: relative;
+  padding-top: 40px;
+  padding: 0 calc(g.$pd-x-pc / 2);
+  max-width: 1280px;
+
+  @include g.mq("tab") {
+    padding-top: 100px;
+  }
+
+  @include g.mq("sp") {
+    padding: 159px g.$pd-x-sp 0;
+  }
+
+  &__phrase {
+    position: absolute;
+    top: 0;
+    transform: translateY(-42%);
+    z-index: 2;
+
+    @include g.mq("sp") {
+      top: 50px;
+      width: 90%;
+    }
+
+    &:hover {
+      .c-catch__phrase span::before,
+      .c-catch__phrase span::after {
+        background: g.$color-accent;
+        transition: all g.$transition;
+      }
+      .c-catch__phrase-accent {
+        color: g.$color-accent;
+        transition: all g.$transition;
+      }
+      .l-text-accent::after {
+        background: g.$color-accent;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+    padding-left: calc(g.$pd-x-pc / 2);
+
+    @include g.mq("sp") {
+      display: block;
+      padding-left: 0;
+    }
+
+  }
+
+  &__text {
+    width: 50%;
+  }
+}
+

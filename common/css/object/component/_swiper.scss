@@ -1,0 +1,29 @@
+@use "../../global/" as g;
+
+.l-top {
+  &:hover {
+    .swiper-slide-item {
+      filter: none;
+    }
+  }
+}
+
+// .swiper-android .swiper-slide, .swiper-wrapper,
+// .swiper-slide .swiper-slide-duplicate .swiper-slide-duplicate-prev {
+//   object-fit: contain;
+// }
+
+.swiper-slide-item {
+  filter: g.$img-filter;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  transition: filter 0.8s;
+  @include g.mq("sp") {
+    filter: none;
+  }
+
+  img {
+    object-fit: contain;
+  }
+}

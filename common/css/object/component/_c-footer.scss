@@ -1,0 +1,73 @@
+@use "../../global/" as g;
+
+.c-footer {
+  &__logo {
+    width: 227px;
+    height: auto;
+    padding-top: 50px;
+  }
+
+  &__body {
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    padding: 0 70px;
+    max-width: 1280px;
+
+    @include g.mq("tab") {
+      padding: 0 30px;
+    }
+    @include g.mq("sp") {
+      display: block;
+      margin: 20px auto 40px;
+      padding: 0 90px;
+    }
+  }
+
+  &__active {
+    width: 50%;
+    color: #fff;
+    @include g.font(16, 16, 19.36, 400);
+
+    @include g.mq("sp") {
+      width: 100%;
+    }
+  }
+  &__address {
+    width: 50%;
+    color: #fff;
+    @include g.font(16, 16, 19.36, 400);
+
+    @include g.mq("sp") {
+      width: 100%;
+      margin-top: 40px;
+    }
+  }
+
+  &__name {
+    position: relative;
+    padding-right: 10px;
+    width: fit-content;
+    margin-bottom: 20px;
+
+    &::after {
+      position: absolute;
+      content: ":";
+      color: #fff;
+      top: 0;
+      right: 0;
+    }
+  }
+  &__text {
+    span {
+      margin-top: 20px;
+      font-size: g.rem(12);
+    }
+  }
+
+  &__copy {
+    text-align: center;
+    color: #fff;
+    padding-bottom: 20px;
+  }
+}

@@ -1,0 +1,56 @@
+@use "../../global/" as g;
+
+.c-header {
+  &__nav-item {
+    padding: 10px;
+    font-family: g.$font-en;
+    transition: all g.$transition;
+    @include g.font(24, 24, 0, 300);
+
+    span {
+      @include g.font(12, 16, 0, 300);
+      margin-left: 0.5rem;
+    }
+
+    &:hover {
+      opacity: g.$opacity;
+      color: g.$color-accent;
+    }
+  }
+}
+
+.c-header__sns-links {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.c-header__sns-link {
+  width: 32px;
+  height: 32px;
+
+  &:hover {
+    path {
+      fill: g.$white;
+      stroke: #333;
+      stroke-width: 2px;
+    }
+  }
+
+  path {
+    transition: all g.$transition;
+  }
+}
+
+.github-box {
+  width: 100px;
+  height: 100px;
+}
+
+.octicon-mark-github {
+  border-radius: 50%;
+}
+
+

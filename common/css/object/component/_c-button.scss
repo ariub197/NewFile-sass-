@@ -1,0 +1,187 @@
+@use "sass:map";
+@use "../../global/" as g;
+
+.c-button-contact {
+  box-shadow: g.$header-contact;
+  color: g.$color-main;
+  background: g.$btn-color;
+  width: 80%;
+  margin: 0 auto;
+  transition: all g.$transition;
+
+  &:hover {
+    background: g.$btn-hover;
+  }
+}
+
+.c-button-contact-profile {
+  margin: 80px auto;
+  padding: 25px 50px;
+  border: 1px solid g.$color-line;
+  width: fit-content;
+  background: g.$white;
+  transition: all g.$transition;
+
+  &:hover {
+    background: g.$btn-solid;
+    color: g.$white;
+  }
+}
+
+.c-contact-button {
+  display: grid;
+  grid-template-columns: 30px max-content;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 20px 17px 5px;
+  background: g.$header-background;
+  box-shadow: g.$box-shadow;
+  transition: all g.$transition;
+  gap: 10px;
+
+  &:hover {
+    background: g.$btn-hover;
+    color: g.$white;
+
+    svg {
+      fill: g.$white;
+    }
+  }
+
+  svg {
+    transition: all g.$transition;
+  }
+
+  &__sp {
+    display: grid;
+    grid-template-columns: 30px max-content;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 5px 5px 15px;
+    background: g.$header-background;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0 0 6px 6px;
+    transition: all g.$transition;
+
+    svg {
+      margin: 0 auto;
+      transition: all g.$transition;
+    }
+
+    &::after {
+      position: absolute;
+      content: "Contact";
+      bottom: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &:hover {
+      background: g.$btn-hover;
+      color: g.$white;
+
+      svg {
+        fill: g.$white;
+      }
+    }
+  }
+}
+
+.c-content-button {
+  margin-left: auto;
+  margin-top: 40px;
+  width: 120px;
+  height: 30px;
+  clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+  background: g.$btn-background;
+  @include g.mq("sp") {
+    margin-top: 20px;
+  }
+}
+
+.c-button-more {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+  clip-path: polygon(
+    1px 1px,
+    calc(90% - 0.5px) 1px,
+    calc(100% - 1.5px) 50%,
+    calc(90% - 0.5px) calc(100% - 1px),
+    1px calc(100% - 1px)
+  );
+  color: g.$color-text;
+  background: g.$white;
+  z-index: 1;
+  transition: all g.$transition;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: g.$btn-background;
+    transition: all g.$transition;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: g.$white;
+
+    &::before {
+      width: 100%;
+    }
+  }
+
+  span {
+    font-family: g.$font-en;
+    padding-right: 8px;
+    margin: auto;
+    @include g.font(20, 20, 0, 400);
+  }
+}
+
+#c-pagetop {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background: g.$pagetop;
+  padding: 23px;
+  z-index: map.get(g.$layer, pagetop);
+  mix-blend-mode: difference;
+  animation: border-transform 7s linear infinite;
+  transition: g.$transition;
+  @include g.mq("sp") {
+    width: 40px;
+    height: 40px;
+    bottom: 20px;
+    right: 20px;
+    padding: 13px 14px;
+  }
+
+  &:hover {
+    scale: 1.1;
+    animation-duration: 3s;
+
+    &::after {
+      animation-duration: 3s;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    border: 1px solid #000;
+    animation: border-transform-revers 7s linear infinite;
+  }
+}

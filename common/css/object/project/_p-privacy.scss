@@ -1,0 +1,18 @@
+@use "../../global/" as g;
+
+.p-privacy {
+  h3 {
+    @include g.font(22, 22, 0, 700);
+    margin: 40px 0 20px;
+  }
+
+  p {
+    @include g.font(16, 28, 0, 400);
+  }
+
+  li {
+    @include g.font(16, 28, 0, 400);
+    list-style: decimal;
+    margin-left: 20px;
+  }
+}

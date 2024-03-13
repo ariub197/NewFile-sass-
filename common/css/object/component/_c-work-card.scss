@@ -1,0 +1,62 @@
+@use "../../global/" as g;
+
+.c-work-card {
+  width: 100%;
+
+  &__img {
+    filter: g.$img-filter;
+    width: 100%;
+    overflow: hidden;
+    transition: all g.$transition;
+    aspect-ratio: 1.56 / 1;
+    @include g.mq("sp") {
+      filter: none;
+    }
+
+    &:hover {
+      filter: none;
+    }
+
+    img {
+      transition: all g.$transition;
+
+      &:hover {
+        transform: scale(1.1, 1.1);
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    transition: all g.$transition;
+  }
+
+  &__tag {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    background: #fff;
+    @include g.font(12, 12, 0, 400);
+    padding: 5px 26px;
+    border: 1px solid g.$color-main;
+    border-radius: 50px;
+    pointer-events: none;
+    z-index: 1;
+    @include g.mobileL {
+      font-size: 1rem;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    font-size: 12px;
+    padding: 20px 0;
+    width: fit-content;
+    margin-left: auto;
+
+    i {
+      margin-right: 5px;
+    }
+  }
+}

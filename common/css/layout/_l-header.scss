@@ -1,0 +1,77 @@
+@use "sass:map";
+@use "../global/" as g;
+
+.l-header {
+  position: fixed;
+  background: g.$header-color;
+  width: 20%;
+  min-width: 225px;
+  height: 100%;
+  padding: 50px 20px;
+  z-index: map.get(g.$layer, header);
+  box-shadow: g.$header-shadow;
+  @include g.mq("sp") {
+    display: none;
+    padding: 0px;
+  }
+
+  &__pc {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__logo {
+    img {
+      filter: g.$img-filter;
+      transition: all g.$transition;
+
+      &:hover {
+        filter: none;
+      }
+      @include g.mq("sp") {
+        filter: none;
+      }
+    }
+  }
+
+  &__nav {
+    padding-left: 0.8rem;
+    margin-top: 100px;
+  }
+
+  &__contact {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.l-header__sp {
+  position: fixed;
+  display: none;
+  height: 50px;
+  top: 0;
+  left: 0;
+  z-index: map.get(g.$layer, header);
+  @include g.mq("sp") {
+    display: flex;
+    top: 4px;
+  }
+}
+
+.l-header__logo-sp {
+  width: 208px;
+  filter: drop-shadow(2px 4px 6px g.$white);
+}
+
+.l-header__contact-sp {
+  position: fixed;
+  top: 0;
+  right: 60px;
+  width: 80px;
+  height: 50px;
+  @include g.mobileL {
+    width: 50px;
+  }
+}

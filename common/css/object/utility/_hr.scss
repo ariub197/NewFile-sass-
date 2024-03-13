@@ -1,0 +1,10 @@
+@use '../../global' as g;
+/* hr
+----------------------------------------------------------------- */
+.u-hr {
+  border-top: 1px solid g.$black_light;
+
+  &--dotted {
+    border-top: 1px dotted g.$black_light;
+  }
+}

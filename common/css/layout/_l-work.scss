@@ -1,0 +1,22 @@
+@use "../global/" as g;
+
+.l-work {
+  display: grid;
+  justify-content: space-between;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  @include g.mq("tab") {
+    gap: 1rem;
+  }
+  @include g.mobileL {
+    display: block;
+  }
+
+  &--triple {
+    @extend .l-work;
+    grid-template-columns: repeat(3, 1fr);
+    @include g.mq("tab") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

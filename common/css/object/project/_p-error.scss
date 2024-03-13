@@ -1,0 +1,44 @@
+@use "../../global/" as g;
+
+.p-error-page {
+  @include g.font(128, 128, 100, 700);
+  margin-top: 300px;
+  text-align: center;
+
+  @include g.mq("sp") {
+    margin-top: 150px;
+  }
+}
+
+.p-error-title {
+  @include g.font(28, 28, 1, 700);
+  text-align: center;
+  color: g.$color-sub;
+  margin-bottom: 40px;
+}
+
+.p-error-text {
+  @include g.font(18, 18, 1, 400);
+  text-align: center;
+}
+
+.p-error-btn {
+  display: flex;
+  padding-bottom: 120px;
+  justify-content: center;
+
+  @include g.mq("sp") {
+    padding-bottom: 60px;
+  }
+}
+
+.p-error__top {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 20px;
+  width: fit-content;
+
+  &:hover {
+    opacity: g.$opacity;
+  }
+}
