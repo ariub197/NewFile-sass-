@@ -1,1 +1,3 @@
-AddHandler application/x-httpd-php .php .HTML
+<FilesMatch "\.html$">
+  AddHandler application/x-httpd-php .php .HTML
+</FilesMatch>
