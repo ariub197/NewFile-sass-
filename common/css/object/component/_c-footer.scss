@@ -14,10 +14,10 @@
     padding: 0 70px;
     max-width: 1280px;
 
-    @include g.mq("tab") {
+    @include g.tabletM {
       padding: 0 30px;
     }
-    @include g.mq("sp") {
+    @include g.tabletS {
       display: block;
       margin: 20px auto 40px;
       padding: 0 90px;
@@ -29,7 +29,7 @@
     color: #fff;
     @include g.font(16, 16, 19.36, 400);
 
-    @include g.mq("sp") {
+    @include g.tabletS {
       width: 100%;
     }
   }
@@ -38,7 +38,7 @@
     color: #fff;
     @include g.font(16, 16, 19.36, 400);
 
-    @include g.mq("sp") {
+    @include g.tabletS {
       width: 100%;
       margin-top: 40px;
     }

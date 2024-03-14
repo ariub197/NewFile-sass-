@@ -1,0 +1,37 @@
+/* header-nav
+----------------------------------------------------------------- */
+@use '../../global' as g;
+
+.c-header-nav {
+  height: inherit;
+  @include g.tabletS {
+    width: 100%;
+  }
+
+  &__list {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    height: inherit;
+    padding-inline: 2rem;
+    @include g.tabletS {
+      padding: 0;
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__item {
+    font-size: g.$fs;
+    font-weight: bold;
+    @include g.tabletS {
+      width: 100%;
+      padding-block: 1rem;
+    }
+
+    &:hover {
+      opacity: g.$opacity;
+    }
+  }
+}

@@ -26,13 +26,19 @@ component
 @use "object/component/c-section";
 @use "object/component/c-content";
 @use "object/component/c-header";
+@use "object/component/c-header-nav";
 @use "object/component/c-catch";
 @use "object/component/c-work-card";
 @use "object/component/c-overview";
-@use "object/component/c-button";
-@use "object/component/c-breadcrumb";
 @use "object/component/c-footer";
 @use "object/component/c-form";
+@use "object/component/c-nav";
+
+//btn
+@use "object/component/c-btn";
+@use "object/component/c-btn-hamburger";
+
+@use "object/component/c-breadcrumb";
 @use "object/component/swiper";
 
 //pointer
