@@ -8,6 +8,18 @@
 </head>
 <body>
   <header id="header">
-    <h1 class="c-header__logo"><img src="<?php include($_SERVER['DOCUMENT_ROOT']."common/img/logo_header.png"); ?>" alt="ロゴ画像"></h1>
-    <p class="content">text</p>
+    <h1 class="c-header__logo">
+      <img src="/common/img/logo/logo_header.png" alt="ロゴ画像">
+    </h1>
+
+    <nav class="c-header-nav">
+      <ul class="c-header-nav__list">
+        <li class="c-header-nav__item"><a href="" class="c-header-nav__link">about</a></li>
+        <li class="c-header-nav__item"><a href="" class="c-header-nav__link">about</a></li>
+        <li class="c-header-nav__item"><a href="" class="c-header-nav__link">about</a></li>
+        <li class="c-header-nav__item"><a href="" class="c-header-nav__link">about</a></li>
+        <li class="c-header-nav__item"><a href="" class="c-header-nav__link">about</a></li>
+        <li class="c-header-nav__item"><a href="" class="c-header-nav__link">about</a></li>
+      </ul>
+    </nav>
   </header>

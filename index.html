@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <?php $text = "test" ?>
+<?php include($_SERVER['DOCUMENT_ROOT']."/common/php/header.php"); ?>
+
   <p><?php echo(__FILE__);?></p>
   <?php echo $text; ?>
   <p>test page</p>
 
-  <?php include('./common/php/footer.php'); ?>
+<!-- footer start -->
+<?php include($_SERVER['DOCUMENT_ROOT']."/common/php/footer.php"); ?>
