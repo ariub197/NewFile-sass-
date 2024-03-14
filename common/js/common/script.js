@@ -1,10 +1,10 @@
 $(function() {
   //header-toggle
-  $('#js-drawer').on('click', function(e){
+  $('[data-nav="btn"]').on('click', function(e){
     e.preventDefault();
     $(this).toggleClass('is-active');
-    $('.c-drawer-content').toggleClass('is-active');
-    $('.c-drawer-background').toggleClass('is-active');
+    $('[data-nav="content"]').toggleClass('is-active');
+    $('[data-nav="bg"]').toggleClass('is-active');
 		if($(this).hasClass('is-active')) {
 			$('body,html').css('overflow-y', 'hidden');
 		} else {
@@ -16,17 +16,17 @@ $(function() {
 
 $(function() {
   //to-top
-  $("#c-pagetop").hide();
+  $('[date-btn="top"]').hide();
 
   $(window).scroll(function(){
     if($(this).scrollTop() > 100){
-      $("#c-pagetop").fadeIn();
+      $('[date-btn="top"]').fadeIn();
     } else {
-      $("#c-pagetop").fadeOut();
+      $('[date-btn="top"]').fadeOut();
     }
   });
 
-  $('#c-pagetop').on('click', ()=>{
+  $('[date-btn="top"]').on('click', ()=>{
     $('body,html').animate({ scrollTop: 0 }, 500);
     return false;
   })

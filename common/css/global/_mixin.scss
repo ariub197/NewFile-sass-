@@ -1,11 +1,5 @@
 @use "./variable" as v;
-
-// media
-@mixin mq($breakpoint: sp) {
-  @media #{map-get(v.$breakpoints, $breakpoint)} {
-    @content;
-  }
-}
+@use "./mediaquery" as m;
 
 // pc font size
 @mixin font($size: 10, $height: 10, $spacing: 0, $weight: 900) {
@@ -22,14 +16,13 @@
   padding: 0 v.$pd-x-pc;
   margin: 0 auto;
 
-  @include mq("sp") {
+  @include m.tabletS {
     padding: 0 v.$pd-x-sp
   }
 }
 
-$baseFontSize: 16;
-
+$font-size: v.$fs/1px;
 //size変換
 @function rem($pixels) {
-  @return ($pixels / $baseFontSize * 1rem);
+  @return ($pixels / $font-size * 1rem);
 }

@@ -12,7 +12,7 @@
     margin-bottom: 120px;
     white-space: nowrap;
 
-    @include g.mq("sp") {
+    @include g.tabletS {
       width: 170px;
       @include g.font(24, 24, 0, 400);
       margin-bottom: 80px;
@@ -33,7 +33,7 @@
   &__title--long {
     width: 400px;
 
-    @include g.mq("sp") {
+    @include g.tabletS {
       width: 300px;
     }
   }
@@ -42,7 +42,7 @@
     @include g.font(18, 18, 0, 700);
     margin-bottom: 40px;
     margin-top: 40px;
-    @include g.mq("sp") {
+    @include g.tabletS {
       margin-bottom: 20px;
     }
   }
@@ -50,7 +50,7 @@
   &__text {
     line-height: 200%;
     margin-bottom: 20px;
-    @include g.mq("sp") {
+    @include g.tabletS {
       margin-bottom: 20px;
     }
   }
@@ -72,7 +72,7 @@
       left: 0;
       background: g.$color-line;
 
-      @include g.mq("sp") {
+      @include g.tabletS {
         width: 100%;
       }
     }
@@ -89,7 +89,7 @@
   &__body {
     width: 85%;
 
-    @include g.mq("sp") {
+    @include g.tabletS {
       width: calc(100% - 20px);
       padding-left: 20px;
     }
@@ -124,7 +124,7 @@
   &__img {
     width: 80%;
     margin: 100px 0 120px;
-    @include g.mq("sp") {
+    @include g.tabletS {
       margin: 50px 0 80px;
       width: 100%;
     }
@@ -145,7 +145,7 @@
   right: 20px;
   z-index: -1;
   writing-mode: vertical-lr;
-  @include g.mq("sp") {
+  @include g.tabletS {
     display: none;
   }
 }

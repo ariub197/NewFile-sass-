@@ -10,7 +10,7 @@
   height: 8px;
   background-color: #000;
   z-index: 1001;
-  @include g.mq("sp") {
+  @include g.tabletS {
     display: none;
   }
 
@@ -29,7 +29,7 @@
     transition: transform 0.2s, top, 0.5s, left 0.5s, width .5s, height .5s, background-color .5s;
     transition-timing-function: ease-out;
     z-index: 999;
-    @include g.mq("sp") {
+    @include g.tabletS {
       display: none;
     }
 
