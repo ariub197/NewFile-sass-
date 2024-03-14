@@ -1,0 +1,45 @@
+/* btn
+----------------------------------------------------------------- */
+@use "sass:map";
+@use "../../global/" as g;
+
+.c-btn {
+  width: 200px;
+  max-width: 100%;
+  margin: 0 auto;
+  background: g.$btn-color;
+  box-shadow: g.$header-contact;
+  transition: all g.$transition;
+
+  &:hover {
+    background: g.$btn-hover;
+  }
+
+  &__contact {
+    width: 150px;
+    max-width: 100%;
+    padding: 10px 1rem;
+    background: #3df;
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: g.$radius;
+    box-shadow: 0 0 5px rgba(#000, 0.4);
+    transition: all g.$transition;
+  }
+
+  &__page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #000;
+    transition: g.$transition;
+
+    &:hover {
+      background: #3df;
+    }
+  }
+}

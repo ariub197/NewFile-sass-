@@ -15,7 +15,7 @@
   transition: transform g.$transition ease 0s;
   color: #fff;
 
-  @include g.mq("sp") {
+  @include g.tabletS {
     display: block;
   }
 

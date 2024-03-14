@@ -4,7 +4,7 @@
   border-collapse: collapse;
   table-layout: fixed;
   width: 80%;
-  @include g.mq("sp") {
+  @include g.tabletS {
     width: 100%
   }
 
@@ -13,7 +13,7 @@
     @include g.font(16, 16, 19.36, 400);
     border: 1px solid g.$color-line;
     padding: 8px 20px;
-    @include g.mq("sp") {
+    @include g.tabletS {
       padding-inline: 10px;
     }
   }

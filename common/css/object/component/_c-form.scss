@@ -5,7 +5,7 @@
   max-width: 100%;
   margin: 60px auto 0;
 
-  @include g.mq("sp") {
+  @include g.tabletS {
     margin-top: 20px;
   }
 
@@ -25,7 +25,7 @@
     border-bottom: 1px solid g.$color-main;
     padding-bottom: 10px;
 
-    @include g.mq("sp") {
+    @include g.tabletS {
       border: 1px solid g.$color-background;
       line-height: 30px;
       padding-bottom: 3px;
@@ -37,7 +37,7 @@
     height: 180px;
     border: 1px solid g.$color-background;
 
-    @include g.mq("sp") {
+    @include g.tabletS {
       margin-top: 20px;
     }
   }
@@ -52,7 +52,7 @@
     margin-top: 40px;
     transition: all g.$transition;
 
-    @include g.mq("sp") {
+    @include g.tabletS {
       padding: 20px;
     }
 
@@ -109,13 +109,13 @@
     @include g.font(16, 16, 19.36, 700);
     margin: 20px 0;
 
-    @include g.mq("sp") {
+    @include g.tabletS {
       margin-bottom: 0;
     }
   }
 
   tr {
-    @include g.mq("sp") {
+    @include g.tabletS {
       display: flex;
       flex-direction: column;
     }
@@ -129,7 +129,7 @@
     padding: 20px 0 10px;
     white-space: nowrap;
 
-    @include g.mq("sp") {
+    @include g.tabletS {
       width: 100%;
       border: none;
     }
@@ -141,7 +141,7 @@
     margin-left: 20px;
     padding-bottom: 0;
 
-    @include g.mq("sp") {
+    @include g.tabletS {
       width: 100%;
       margin-left: 0;
       padding: 0;

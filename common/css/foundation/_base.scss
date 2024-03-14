@@ -1,24 +1,23 @@
 @use "../global/" as g;
 
 html {
-  font-size: 16px;
-  cursor: none;
+  font-size: g.$fs;
   @include g.mobileL {
     font-size: calc(1vw * 1000 / 360);
   }
 }
 
 body {
-  display: flex;
+  display: block;
   color: g.$color-text;
   font-family: g.$ff-base;
-  font-size: g.$fz-base;
+  font-size: g.$fs-base;
   font-weight: g.$fw-base;
   text-align: left;
   overflow-x: hidden;
   overflow-y: scroll;
   width: 100%;
-  @include g.mq("sp") {
+  @include g.tabletS {
     display: block;
   }
 }
@@ -32,10 +31,10 @@ body {
 main {
   width: 80%;
   margin-left: auto;
-  @include g.mq("tab") {
+  @include g.tabletM {
     width: calc(100% - 225px);
   }
-  @include g.mq("sp") {
+  @include g.tabletS {
     width: 100%;
     padding-top: 50px;
   }

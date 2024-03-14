@@ -1,3 +1,5 @@
+/* l-content
+----------------------------------------------------------------- */
 @use "../global/" as g;
 
 .l-content {
@@ -11,7 +13,7 @@
     background-attachment: fixed;
   }
 
-  @include g.mq("sp") {
+  @include g.tabletS {
     margin-top: 80px;
   }
 }
@@ -30,7 +32,7 @@
     background: g.$color-background;
     z-index: -1;
     transition: all g.$transition;
-    @include g.mq("sp") {
+    @include g.tabletS {
       background: g.$color-accent;
     }
   }

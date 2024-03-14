@@ -15,7 +15,7 @@
     @include g.font(16, 16, 19.36, 700);
     width: 122px;
 
-    @include g.mq("sp") {
+    @include g.tabletS {
       width: 90px;
     }
   }

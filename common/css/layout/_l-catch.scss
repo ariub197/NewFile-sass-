@@ -6,11 +6,11 @@
   padding: 0 calc(g.$pd-x-pc / 2);
   max-width: 1280px;
 
-  @include g.mq("tab") {
+  @include g.tabletM {
     padding-top: 100px;
   }
 
-  @include g.mq("sp") {
+  @include g.tabletS {
     padding: 159px g.$pd-x-sp 0;
   }
 
@@ -20,7 +20,7 @@
     transform: translateY(-42%);
     z-index: 2;
 
-    @include g.mq("sp") {
+    @include g.tabletS {
       top: 50px;
       width: 90%;
     }
@@ -47,7 +47,7 @@
     align-items: end;
     padding-left: calc(g.$pd-x-pc / 2);
 
-    @include g.mq("sp") {
+    @include g.tabletS {
       display: block;
       padding-left: 0;
     }

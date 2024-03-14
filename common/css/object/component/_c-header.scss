@@ -1,6 +1,36 @@
-@use "../../global/" as g;
+/* header
+----------------------------------------------------------------- */
+@use "sass:map";
+@use "../../global" as g;
 
 .c-header {
+  height: g.$header_height;
+  z-index: map.get(g.$layer, header);
+  background: g.$header_color;
+
+  &__inner {
+    height: g.$header_height;
+    padding-inline: g.$header_inner;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 100%;
+    height: inherit;
+  }
+
+  &__logo-link {
+    width: fit-content;
+    height: inherit;
+  }
+
+  &__logo-img {
+    width: auto;
+    height: 100%;
+  }
+
   &__nav-item {
     padding: 10px;
     font-family: g.$font-en;
@@ -17,40 +47,19 @@
       color: g.$color-accent;
     }
   }
-}
 
-.c-header__sns-links {
-  display: flex;
-  align-items: baseline;
-  gap: 1rem;
-  padding-left: 20px;
-  margin-top: 10px;
-}
-
-.c-header__sns-link {
-  width: 32px;
-  height: 32px;
-
-  &:hover {
-    path {
-      fill: g.$white;
-      stroke: #333;
-      stroke-width: 2px;
+  &__hamburger {
+    display: none;
+    @include g.tabletS {
+      display: block;
     }
   }
 
-  path {
-    transition: all g.$transition;
+  &__contact {
+    //
+    @include g.tabletS {
+      margin-inline: auto;
+      width: fit-content;
+    }
   }
 }
-
-.github-box {
-  width: 100px;
-  height: 100px;
-}
-
-.octicon-mark-github {
-  border-radius: 50%;
-}
-
-

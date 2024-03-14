@@ -19,7 +19,7 @@
   height: auto;
   overflow: hidden;
   transition: filter 0.8s;
-  @include g.mq("sp") {
+  @include g.tabletS {
     filter: none;
   }
 
