@@ -16,8 +16,8 @@ layout
 @use "layout/l-work";
 @use "layout/l-content";
 @use "layout/l-profile";
-@use "layout/main";
-@use "layout/nav";
+@use "layout/l-main";
+@use "layout/l-nav";
 
 /*==========================================================
 component
@@ -30,13 +30,13 @@ component
 @use "object/component/c-work-card";
 @use "object/component/c-overview";
 @use "object/component/c-button";
-@use "object/component/breadcrumb";
+@use "object/component/c-breadcrumb";
 @use "object/component/c-footer";
 @use "object/component/c-form";
 @use "object/component/swiper";
 
 //pointer
-@use "object/component/pointer";
+@use "object/component/c-pointer";
 
 /*==========================================================
 project
@@ -50,17 +50,17 @@ project
 /*==========================================================
 utility
 ==========================================================*/
-@use 'object/utility/_color';
-@use 'object/utility/_display';
-@use 'object/utility/_font';
-@use 'object/utility/_cursor';
-@use 'object/utility/_hr';
-@use 'object/utility/_img';
-@use 'object/utility/_link';
-@use 'object/utility/_margin';
-@use 'object/utility/_width';
-@use 'object/utility/_fontsize';
-@use 'object/utility/_linheight';
-@use 'object/utility/_underline';
-@use 'object/utility/_inview';
-@use 'object/utility/_highlight';
+@use 'object/utility/u-color';
+@use 'object/utility/u-display';
+@use 'object/utility/u-font';
+@use 'object/utility/u-cursor';
+@use 'object/utility/u-hr';
+@use 'object/utility/u-img';
+@use 'object/utility/u-link';
+@use 'object/utility/u-margin';
+@use 'object/utility/u-width';
+@use 'object/utility/u-fontsize';
+@use 'object/utility/u-linheight';
+@use 'object/utility/u-underline';
+@use 'object/utility/u-inview';
+@use 'object/utility/u-highlight';
