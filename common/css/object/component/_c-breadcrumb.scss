@@ -4,14 +4,14 @@
   margin-top: 40px;
   display: flex;
   padding-left: 30px;
-  @include g.mq("sp") {
+  @include g.tabletS {
     margin-top: 20px;
     padding-left: 10px;
   }
 
   span {
     margin: 0 10px;
-    @include g.mq("sp") {
+    @include g.tabletS {
       margin-left: 5px;
     }
   }

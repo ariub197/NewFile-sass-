@@ -10,7 +10,7 @@
   padding: 50px 20px;
   z-index: map.get(g.$layer, header);
   box-shadow: g.$header-shadow;
-  @include g.mq("sp") {
+  @include g.tabletS {
     display: none;
     padding: 0px;
   }
@@ -29,7 +29,7 @@
       &:hover {
         filter: none;
       }
-      @include g.mq("sp") {
+      @include g.tabletS {
         filter: none;
       }
     }
@@ -54,7 +54,7 @@
   top: 0;
   left: 0;
   z-index: map.get(g.$layer, header);
-  @include g.mq("sp") {
+  @include g.tabletS {
     display: flex;
     top: 4px;
   }
