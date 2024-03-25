@@ -74,6 +74,7 @@ function concatPlugin() {
     './common/js/plugin/jquery.min.js',
     './common/js/plugin/swiper.min.js',
     './common/js/plugin/desvg.js',
+    './common/js/plugin/tippy-core.min.js',
     './common/js/plugin/tippy-bundle.umd.min.js'
   ])
   // .pipe(plumber())
