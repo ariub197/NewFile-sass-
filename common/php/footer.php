@@ -1,5 +1,5 @@
-<foote id="footer" class="c-footer">
-</foote>
+<footer id="footer" class="c-footer">
+</footer>
 
 <a href="#" class="c-btn__page-top" date-btn="top"></a>
 
