@@ -30,7 +30,7 @@ function watch(){
   gulp.watch("./common/css/**/*.scss", gulp.series(compileSass, browserReload));//左から順に読み込まれる
   // gulp.watch("./common/js/**/*.js", gulp.series(minJS, browserReload));
   gulp.watch("./common/js/**/*.js", browserReload);
-  gulp.watch("./common/img/**/*", gulp.series(copyImage, browserReload));
+  // gulp.watch("./common/img/**/*", gulp.series(copyImage, browserReload));
   gulp.watch("../**/*.php", browserReload);
   gulp.watch("../**/*.html", browserReload);
 }
@@ -52,6 +52,7 @@ function browserReload(done) {
 // concat
 function concatJS() {
   return gulp.src([
+    './common/js/common/animate.js',
     './common/js/common/font.js',
     './common/js/common/desvg.js',
     './common/js/common/tooltip.js',
@@ -99,19 +100,21 @@ function minJS() {
 
 //HTMLの整形
 function formatHTML(done) {
-  return gulp.src("./src/**/*.html")
-  .pipe(htmlBeautify({
-    indent_size: 2,
-    indent_with_tabs: true,
-  }))
-  .pipe(gulp.dest("./src/"))
+  gulp.src("./src/**/*.html")
+    .pipe(htmlBeautify({
+      indent_size: 2,
+      indent_with_tabs: true,
+    }))
+    .pipe(gulp.dest("./src/"));
   done();
 }
 
-function copyImage() {
-  return gulp.src("./common/img/**/*")
-  .pipe(gulp.dest("./common/img/"))
+function copyImage(done) {
+  gulp.src("./common/img/**/*")
+    .pipe(gulp.dest("./common/img/"));
+  done();
 }
+
 
 exports.dev = gulp.parallel(compileSass, browserInit, watch);
 exports.minJS = minJS;

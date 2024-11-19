@@ -1,5 +1,6 @@
 @use "./variable" as v;
 @use "./mediaquery" as m;
+@use "sass:math";
 
 // pc font size
 @mixin font($size: 10, $height: 10, $spacing: 0, $weight: 900) {
@@ -21,8 +22,8 @@
   }
 }
 
-$font-size: v.$fs/1px;
+$font-size: math.div(v.$fs, 1px);
 //size変換
 @function rem($pixels) {
-  @return ($pixels / $font-size * 1rem);
+  @return (math.div($pixels, $font-size) * 1rem);
 }
