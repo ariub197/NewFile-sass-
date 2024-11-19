@@ -14,6 +14,27 @@ $(function() {
 	});
 });
 
+$('a[href^="#"]').on("click", function (e) {
+  e.preventDefault();
+  let header = $(window).width() <= 768 ? 72 : 86;
+  let id = $(this).attr("href");
+  let position = 0;
+  let targetElement = $(id);
+  if (id === "#") {
+    position = $(id).offset().top - header;
+  } else if (targetElement.length) {
+    position = targetElement.offset().top - header;
+  } else {
+    return;
+  }
+  $("html,body").animate(
+    {
+      scrollTop: position,
+    },
+    400
+  );
+});
+
 $(function() {
   //to-top
   $('[date-btn="top"]').hide();
@@ -30,4 +51,19 @@ $(function() {
     $('body,html').animate({ scrollTop: 0 }, 500);
     return false;
   })
+});
+
+//recruit toggle
+$(function () {
+  $('[data-toggle="btn"]').on("click", function () {
+    const content = $(this)
+      .closest('[data-toggle="box"]')
+      .find('[data-toggle="content"]');
+    if (content.hasClass("is-open")) {
+      content.toggleClass("is-open");
+    } else {
+      content.slideToggle();
+    }
+    $(this).find('[data-toggle="icon"]').toggleClass("is-open");
+  });
 });
