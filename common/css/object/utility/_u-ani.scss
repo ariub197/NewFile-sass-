@@ -1,0 +1,23 @@
+/* animation
+----------------------------------------------------------------- */
+@use '../../global' as g;
+
+$color: #888;
+
+.u-ani {
+  overflow: hidden;
+
+  &__shine::after {
+    background: $color;
+    background: linear-gradient(
+      -45deg,
+      $color 50%,
+      lighten($color, 20%) 60%,
+      $color 70%
+    );
+    background-size: 600% 100%;
+    animation: shine 20s infinite;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+  }
+}

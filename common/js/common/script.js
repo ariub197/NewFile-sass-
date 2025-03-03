@@ -50,20 +50,7 @@ $(function() {
   $('[date-btn="top"]').on('click', ()=>{
     $('body,html').animate({ scrollTop: 0 }, 500);
     return false;
-  })
-});
-
-//recruit toggle
-$(function () {
-  $('[data-toggle="btn"]').on("click", function () {
-    const content = $(this)
-      .closest('[data-toggle="box"]')
-      .find('[data-toggle="content"]');
-    if (content.hasClass("is-open")) {
-      content.toggleClass("is-open");
-    } else {
-      content.slideToggle();
-    }
-    $(this).find('[data-toggle="icon"]').toggleClass("is-open");
   });
+
+  new WOW().init();
 });

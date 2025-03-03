@@ -1,0 +1,95 @@
+/* faq
+----------------------------------------------------------------- */
+@use "../../global/" as g;
+
+.c-faq {
+  &__details {
+    border-radius: g.$radius;
+    overflow: hidden;
+    transition: g.$transition;
+  }
+
+  &__head {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    gap: g.rem(28);
+    padding: g.rem(20) g.rem(90) g.rem(40) g.rem(30);
+    background-color: g.$color-main;
+    color: #fff;
+    font-size: g.rem(36);
+    line-height: 1.388888;
+    letter-spacing: 3.6px;
+    font-weight: 600;
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  &__num,
+  &__ans {
+    width: g.rem(42);
+    font-size: g.rem(36);
+    letter-spacing: 3.6px;
+  }
+
+  &__ans {
+    color: g.$color-text;
+  }
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    width: 18px;
+    height: 18px;
+    transform: translate(0, -50%);
+    transition-duration: 0.2s;
+
+    &:before,
+    &:after {
+      content: "";
+      background-color: #fff;
+      border-radius: g.$radius;
+      width: 18px;
+      height: 2px;
+      position: absolute;
+      top: 8px;
+      left: 0;
+      transform-origin: center center;
+    }
+
+    &:before {
+      width: 2px;
+      height: 18px;
+      top: 0;
+      left: 8px;
+    }
+
+    &.is-active {
+      transform: translateY(-50%) rotate(-180deg);
+      &:before {
+        content: none;
+      }
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: g.rem(28);
+    padding: g.rem(30) g.rem(30) g.rem(52);
+    background: #fff;
+  }
+
+  &__text {
+    font-size: g.rem(28);
+    line-height: 1.8757;
+    letter-spacing: 1.12px;
+  }
+}
