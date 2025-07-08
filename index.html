@@ -5,6 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
   <title>title</title>
+  <meta name="description" content="説明文">
+  <meta id="MetaKeywords" name="KEYWORDS" content="keyword">
+  <meta property="og:title" content="title" />
+  <meta property="og:description" content="説明文" />
+  <meta property="og:image" content="/common/images/img/OGP.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:type" content="website" />
   <link rel="stylesheet" href="./common/css/style.min.css">
 </head>
 
@@ -52,6 +60,93 @@
   </section>
   <!-- main end -->
 
+  <!-- form start -->
+  <section id="forms" class="c-form">
+    <div class="c-content__inner">
+      <h2 class="c-content__title">ご予約フォーム<span class="c-content__title-sub">Forms</span></h2>
+
+      <form id="form" action="sendmail.php" method="POST" data-status="init" class="c-form__inner">
+        <div class="c-form__content">
+          <label class="c-form__label"><span class="c-form__required">必須</span>お名前</label>
+            <input type="text" name="your-name" id="your-name" class="c-form__text" placeholder="山田 太朗" required>
+          <span class="error-msg is-none" id="error-name">お名前を入力してください</span>
+        </div>
+        <div class="c-form__content">
+          <label class="c-form__label"><span class="c-form__required">必須</span>ふりがな</label>
+          <input type="text" name="your-kana" id="your-kana" class="c-form__text" placeholder="やまだ たろう" required>
+          <span class="error-msg is-none" id="error-kana">ふりがなを入力してください</span>
+        </div>
+        <div class="c-form__content">
+          <label class="c-form__label"><span class="c-form__required">必須</span>電話番号</label>
+            <input type="tel" name="your-num" id="your-num" class="c-form__text" placeholder="000-0000-0000" required>
+          <span class="error-msg is-none" id="error-num">電話番号を入力してください</span>
+        </div>
+        <div class="c-form__content">
+          <label class="c-form__label"><span class="c-form__required">必須</span>メールアドレス</label>
+            <input type="email" name="your-mail" id="your-mail" class="c-form__text" placeholder="sample@co.jp" required>
+          <span class="error-msg is-none" id="error-mail">メールアドレスを入力してください</span>
+        </div>
+        <div class="c-form__content">
+          <label class="c-form__label"><span class="c-form__required">必須</span>来場日時</label>
+          <div class="c-form__wrap">
+            <div class="c-form__block">
+              <p class="c-form__label">日にち</p>
+              <div class="c-form__icon">
+                <select id="dateSelect" name="your-date" required>
+                  <option value="">-</option>
+                  <option value="6/27（金）">6/27(金)</option>
+                  <option value="6/28(土)">6/28(土)</option>
+                  <option value="6/29(日)">6/29(日)</option>
+                  <span class="select-icon"></span>
+                </select>
+              </div>
+            </div>
+            <div class="c-form__block">
+              <p class="c-form__label">時間</p>
+              <div class="c-form__icon">
+                <select id="timeSelect" name="your-time" required>
+                  <option value="">-</option>
+                  <option value="09:00">09:00</option>
+                  <option value="10:00">10:00</option>
+                  <option value="11:00">11:00</option>
+                  <option value="12:00">12:00</option>
+                  <option value="13:00">13:00</option>
+                  <option value="14:00">14:00</option>
+                  <option value="15:00">15:00</option>
+                  <option value="16:00">16:00</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="c-form__wrap">
+            <span class="error-msg is-none" id="error-dateSelect">来場日を入力してください</span>
+            <span class="error-msg is-none" id="error-timeSelect">来場時間を入力してください</span>
+          </div>
+        </div>
+        <div class="c-form__agree">
+          <h3 class="c-form__agree-title">個人情報の取り扱いについての同意</h3>
+          <p class="c-form__agree-text">
+            入力された個人情報はプライバシーポリシーに基づき取り扱われます。個人情報のお取り扱いに関しまして「個人情報の取り扱いについて」をご確認の上、同意いただける場合は「同意する」にチェックをして確認画面にお進みください。
+          </p>
+          <div class="c-form__agree-check">
+            <span class="acceptForm">
+              <label>
+                <input type="checkbox" name="acceptForm" value="1" id="acceptForm">
+                <span class="c-form__agree-note">個人情報の提供に同意します</span>
+              </label>
+            </span>
+          </div>
+          <span class="error-msg" id="error-acceptForm"></span>
+        </div>
+        <div class="c-form__btn">
+          <button type="submit" id="submitBtn" class="c-btn" disabled>送信</button>
+        </div>
+      </form>
+      <div id="form-message" class="form-message is-hidden"></div>
+    </div>
+  </section>
+  <!-- form send -->
+
   <!-- accordion start -->
   <details class="c-faq__toggle" data-toggle="box">
     <summary class="c-faq__head" data-toggle="btn"><span class="c-faq__num">Q.</span>質問内容が入ります。<span class="c-faq__btn" data-toggle="icon"></span></summary>
@@ -69,6 +164,7 @@
   <!-- footer end -->
 
   <a href="#" class="c-btn__page-top" date-btn="top"></a>
+
   <script src="./common/js/plugins.min.js"></script>
   <script src="./common/js/common.min.js" defer></script>
 </body>

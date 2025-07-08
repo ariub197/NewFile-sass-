@@ -12,6 +12,17 @@ $(function() {
 		}
     return false;
 	});
+
+  $(document).on("click", function (e) {
+    if ($(e.target).closest('[data-nav="content"]')) {
+      $('[data-nav="btn"]').removeClass("is-active");
+      $('[data-nav="line"]').removeClass("is-active");
+      $('[data-nav="content"]').removeClass("is-active");
+      $('[data-nav="bg"]').removeClass("is-active");
+      $('[data-nav="logo"]').removeClass("is-white");
+      $("body,html").css("overflow-y", "visible");
+    }
+  });
 });
 
 $('a[href^="#"]').on("click", function (e) {
